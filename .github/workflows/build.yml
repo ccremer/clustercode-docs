@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        persist-credentials: true
     - uses: actions/cache@v2
       with:
         path: docs/node_modules

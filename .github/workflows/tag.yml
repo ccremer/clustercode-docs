@@ -1,0 +1,38 @@
+name: Tag
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_tag:
+        description: The new git tag to add to the Antora playbook
+        required: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: docs/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - uses: chrisdickinson/setup-yq@latest
+      with:
+        yq-version: v4.2.0
+    - name: Add new tag to Antora playbook
+      run: make docs-add-clustercode-tag NEW_TAG=${{ github.event.inputs.new_tag }}
+    - name: Commit new tag to Antora playbook
+      uses: EndBug/add-and-commit@v6
+      with:
+        add: '*'
+        author_name: "${{ github.actor }}"
+        author_email: "${{ github.actor }}@users.noreply.github.com"
+        message: "Trigger tag build clustercode@${{ github.event.inputs.new_tag }}"
+    - name: Configure Git
+      run: |
+        git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+    - name: Build & Publish Antora documentation
+      run: make docs-publish

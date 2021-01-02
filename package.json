@@ -1,11 +1,15 @@
 {
   "dependencies": {
-    "@antora/cli": "2.3.4",
+    "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "2.3.4",
+    "gh-pages": "^3.1.0",
     "http-server": "^0.12.3"
   },
   "scripts": {
     "postinstall": "cp --force aggregate-content.js node_modules/@antora/content-aggregator/lib/",
-    "serve": "http-server public -c-1"
+    "build": "antora ${ANTORA_PLAYBOOK_PATH:-antora-playbook.yml} ${ANTORA_ARGS}",
+    "postbuild": "touch public/.nojekyll",
+    "serve": "http-server public -c-1",
+    "deploy": "gh-pages -d public --dotfiles -m \"Update documentation $(date --utc '+%Y-%m-%d %H:%M')\""
   }
 }

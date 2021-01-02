@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        persist-credentials: true
     - uses: actions/cache@v2
       with:
         path: docs/node_modules
@@ -20,11 +20,8 @@ jobs:
           ${{ runner.os }}-node-
     - name: Configure Git
       run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-    - name: Build Antora site
-      run: make docs-build
-    - name: Push Antora build to gh-pages
-      run: .github/antora-gh-pages.sh
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+    - name: Build & Publish Antora documentation
+      run: make docs-publish

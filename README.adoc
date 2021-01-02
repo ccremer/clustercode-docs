@@ -3,9 +3,7 @@
 == Build Documentation
 
 . Edit the tags/versions to build the documention in `antora-playbook.yml`
-. Run the build: `make docs-build`
-. Run a local web server: `make docs-serve`
-. Clean local files: `make docs-clean`
+. See possible actions with `make help`
 
 == Requirements
 

@@ -13,5 +13,5 @@ ui:
     snapshot: true
   supplemental_files: ./supplemental-ui
 output:
-  dir: public/
+  dir: public
   clean: true

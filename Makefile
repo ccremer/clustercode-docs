@@ -19,7 +19,7 @@ node_modules: ## Install Antora and its dependencies
 docs-clean: ## Clean local files
 	rm -r $(ANTORA_OUTPUT_DIR) node_modules || true
 
-docs-serve: docs-build ## Preview Antora build in local web server
+docs-preview: docs-build ## Preview Antora build in local web server
 	npm run serve
 
 help: ## Show this help

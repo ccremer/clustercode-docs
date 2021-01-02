@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Clustercode - Kubernetes Movie and Series Operator :: Clustercode Docs</title>
+    <title>Clustercode Architecture History :: Clustercode Docs</title>
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -19,17 +19,17 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="clustercode" data-version="v2.0.0-rc3">
+<div class="nav-container" data-component="clustercode" data-version="master">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Clustercode</a></h3>
+    <h3 class="title"><a href="../index.html">Clustercode</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="index.html">Introduction</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
   </li>
 </ul>
   </li>
@@ -65,10 +65,10 @@
     <span class="nav-text">Explanation</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../explanations/how-it-works.html">How Clustercode Works</a>
+    <a class="nav-link" href="how-it-works.html">How Clustercode Works</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../explanations/history.html">Clustercode Architecture History</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="history.html">Clustercode Architecture History</a>
   </li>
 </ul>
   </li>
@@ -78,17 +78,17 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Clustercode</span>
-    <span class="version">v2.0.0-rc3</span>
+    <span class="version">master</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="../index.html">Clustercode</a>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version is-current is-latest">
           <a href="../index.html">master</a>
         </li>
-        <li class="version is-current">
-          <a href="index.html">v2.0.0-rc3</a>
+        <li class="version">
+          <a href="../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
         </li>
         <li class="version">
           <a href="../1.3.3/index.html">1.3.3</a>
@@ -106,69 +106,52 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Clustercode</a></li>
-    <li><a href="index.html">Introduction</a></li>
+    <li><a href="../index.html">Clustercode</a></li>
+    <li>Explanation</li>
+    <li><a href="history.html">Clustercode Architecture History</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">v2.0.0-rc3</button>
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
-    <a class="version" href="../index.html">master</a>
-    <a class="version is-current" href="index.html">v2.0.0-rc3</a>
-    <a class="version" href="../1.3.3/index.html">1.3.3</a>
+    <a class="version is-current" href="history.html">master</a>
+    <a class="version" href="../v2.0.0-rc3/explanations/history.html">v2.0.0-rc3</a>
+    <a class="version is-missing" href="../1.3.3/index.html">1.3.3</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/blob/v2.0.0-rc3/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/edit/master/docs/modules/ROOT/pages/explanations/history.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Clustercode - Kubernetes Movie and Series Operator</h1>
-<h2 id="_introduction" class="discrete">Introduction</h2>
+<h1 class="page">Clustercode Architecture History</h1>
 <div class="paragraph">
-<p>Automatically convert your movies and TV shows from one file format to another using ffmpeg in a cluster.
-It&#8217;s like an ffmpeg operator.</p>
+<p>In Clustercode 1.x, the stack consists of a Java-based Master node and several Slave nodes.
+However, parallelization was not achieved by splitting the media file.
+Instead, each Slave would get assigned a media file on its own, enabling parallelization only when having multiple media files to convert.
+The file system itself served as database when it comes to remember which files were already converted.</p>
 </div>
 <div class="paragraph">
-<p>Clustercode is written in <a href="https://golang.org/">Go</a> and is an Open Source project <a href="https://github.com/ccremer/clustercode">hosted in GitHub</a>.</p>
+<p>This became soon difficult to maintain.</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The <a href="tutorials/tutorial.html" class="page">tutorial</a> gives you a glimpse into Clustercode. Give it a try!
-</td>
-</tr>
-</table>
-</div>
-<h2 id="_documentation" class="discrete">Documentation</h2>
 <div class="paragraph">
-<p>The documentation is inspired by the <a href="https://documentation.divio.com/">Divio&#8217;s documentation structure</a>:</p>
+<p>Some time later, another attempt was made by using a message based architecture.
+There would be a Java-based Master for scheduling, a CouchDB database and Go-based Slaves.
+At least the same split-encode-merge parallelization concept was planned.
+However, the code grew much into solving infrastructure problems: How to connect to each other, what database scheme, error handling, logging, synchronization etc.
+The actual, more interesting business code was never completed or released.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Tutorials</dt>
-<dd>
-<p><em>Learning-oriented</em>: Simple lessons to learn about Clustercode.</p>
-</dd>
-<dt class="hdlist1">How-to guides</dt>
-<dd>
-<p><em>Problem-oriented</em>: step-by-step guides to achieve a goal.</p>
-</dd>
-<dt class="hdlist1">Technical reference</dt>
-<dd>
-<p><em>Information-oriented</em>: explaining the inner ongoings of Clustercode.</p>
-</dd>
-<dt class="hdlist1">Explanation</dt>
-<dd>
-<p><em>Understanding-oriented</em>: puts Clustercode in context.</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Another year or two passed without activity.</p>
+</div>
+<div class="paragraph">
+<p>Meanwhile the original maintainer gained a lot of knowledge on Kubernetes and its concept of Operators.
+Soon, the decision was taken try yet another attempt, this time using Kubernetes both as database and scheduler.
+The big advantage of this architecture is reduce maintenance to the actual business logic.
+Clustercode itself would become stateless, everything is stored in Kubernetes.
+However, requiring Kubernetes definitely increases installation complexity, and some users might actually not install it due to this.</p>
 </div>
 </article>
   </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Clustercode - Kubernetes Movie and Series Operator :: Clustercode Docs</title>
+    <title>How To Create A Clustercode Plan :: Clustercode Docs</title>
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -19,17 +19,17 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="clustercode" data-version="v2.0.0-rc3">
+<div class="nav-container" data-component="clustercode" data-version="master">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Clustercode</a></h3>
+    <h3 class="title"><a href="../index.html">Clustercode</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="index.html">Introduction</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
   </li>
 </ul>
   </li>
@@ -46,8 +46,8 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">How To</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../how-tos/create-clustercode-plan.html">Create Clustercode Plan</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="create-clustercode-plan.html">Create Clustercode Plan</a>
   </li>
 </ul>
   </li>
@@ -78,17 +78,17 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Clustercode</span>
-    <span class="version">v2.0.0-rc3</span>
+    <span class="version">master</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="../index.html">Clustercode</a>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version is-current is-latest">
           <a href="../index.html">master</a>
         </li>
-        <li class="version is-current">
-          <a href="index.html">v2.0.0-rc3</a>
+        <li class="version">
+          <a href="../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
         </li>
         <li class="version">
           <a href="../1.3.3/index.html">1.3.3</a>
@@ -106,69 +106,88 @@
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Clustercode</a></li>
-    <li><a href="index.html">Introduction</a></li>
+    <li><a href="../index.html">Clustercode</a></li>
+    <li>How To</li>
+    <li><a href="create-clustercode-plan.html">Create Clustercode Plan</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">v2.0.0-rc3</button>
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
-    <a class="version" href="../index.html">master</a>
-    <a class="version is-current" href="index.html">v2.0.0-rc3</a>
-    <a class="version" href="../1.3.3/index.html">1.3.3</a>
+    <a class="version is-current" href="create-clustercode-plan.html">master</a>
+    <a class="version" href="../v2.0.0-rc3/how-tos/create-clustercode-plan.html">v2.0.0-rc3</a>
+    <a class="version is-missing" href="../1.3.3/index.html">1.3.3</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/blob/v2.0.0-rc3/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/edit/master/docs/modules/ROOT/pages/how-tos/create-clustercode-plan.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Clustercode - Kubernetes Movie and Series Operator</h1>
-<h2 id="_introduction" class="discrete">Introduction</h2>
+<h1 class="page">How To Create A Clustercode Plan</h1>
 <div class="paragraph">
-<p>Automatically convert your movies and TV shows from one file format to another using ffmpeg in a cluster.
-It&#8217;s like an ffmpeg operator.</p>
+<p>This is an example of Clustercode Plan</p>
 </div>
-<div class="paragraph">
-<p>Clustercode is written in <a href="https://golang.org/">Go</a> and is an Open Source project <a href="https://github.com/ccremer/clustercode">hosted in GitHub</a>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: clustercode.github.io/v1alpha1
+kind: ClustercodePlan
+metadata:
+  name: test-plan
+spec:
+  scanSchedule: "*/30 * * * *"
+  storage:
+    sourcePvc:
+      claimName: my-nfs-source
+      #subPath: source
+    intermediatePvc:
+      claimName: some-other-storage-claim
+      #subPath: intermediate
+    targetPvc:
+      claimName: my-nfs-target
+      #subPath: target
+  scanSpec:
+    mediaFileExtensions:
+      - mp4
+  taskConcurrencyStrategy:
+    concurrentCountStrategy:
+      maxCount: 1
+  encodeSpec:
+    sliceSize: 120 # after how many seconds to split
+    defaultCommandArgs: ["-y","-hide_banner","-nostats"]
+    splitCommandArgs:
+      - -i
+      - ${INPUT}
+      - -c
+      - copy
+      - -map
+      - "0"
+      - -segment_time
+      - ${SLICE_SIZE}
+      - -f
+      - segment
+      - ${OUTPUT}
+    transcodeCommandArgs:
+      - -i
+      - ${INPUT}
+      - -c:v
+      - copy
+      - -c:a
+      - copy
+      - ${OUTPUT}
+    mergeCommandArgs:
+      - -f
+      - concat
+      - -safe
+      - "0"
+      - -i
+      - ${INPUT}
+      - -c
+      - copy
+      - ${OUTPUT}</code></pre>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The <a href="tutorials/tutorial.html" class="page">tutorial</a> gives you a glimpse into Clustercode. Give it a try!
-</td>
-</tr>
-</table>
-</div>
-<h2 id="_documentation" class="discrete">Documentation</h2>
-<div class="paragraph">
-<p>The documentation is inspired by the <a href="https://documentation.divio.com/">Divio&#8217;s documentation structure</a>:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Tutorials</dt>
-<dd>
-<p><em>Learning-oriented</em>: Simple lessons to learn about Clustercode.</p>
-</dd>
-<dt class="hdlist1">How-to guides</dt>
-<dd>
-<p><em>Problem-oriented</em>: step-by-step guides to achieve a goal.</p>
-</dd>
-<dt class="hdlist1">Technical reference</dt>
-<dd>
-<p><em>Information-oriented</em>: explaining the inner ongoings of Clustercode.</p>
-</dd>
-<dt class="hdlist1">Explanation</dt>
-<dd>
-<p><em>Understanding-oriented</em>: puts Clustercode in context.</p>
-</dd>
-</dl>
 </div>
 </article>
   </div>

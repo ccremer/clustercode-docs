@@ -1,6 +1,7 @@
 site:
   title: Clustercode Docs
   start_page: clustercode::index.adoc
+  url: https://ccremer.github.io/clustercode-docs
 content:
   sources:
     - url: https://github.com/ccremer/clustercode.git

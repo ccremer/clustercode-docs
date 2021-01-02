@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Constraints :: Clustercode Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../../..">Clustercode Docs</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="clustercode" data-version="1.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Clustercode</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-docker.html">Install On Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-windows.html">Install On Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-netdata.html">Install Netdata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/upgrade.html">Upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Technical reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/storage.html">Storage Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/scan.html">Scan Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/encoder.html">Encoder Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cluster.html">Cluster Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cleanup.html">Cleanup Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/api.html">API Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Explanation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="storage.html">Storage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scan.html">Scan</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="encoder.html">Encoder</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cluster.html">Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cleanup.html">Cleanup</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="api.html">API</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Clustercode</span>
+    <span class="version">1.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Clustercode</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">1.3.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Clustercode</a></li>
+    <li>Explanation</li>
+    <li><a href="constraints.html">Constraints</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">1.3.3</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../index.html">master</a>
+    <a class="version is-missing" href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+    <a class="version is-current" href="constraints.html">1.3.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/blob/1.3.3/docs/modules/ROOT/pages/explanations/constraints.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Constraints</h1>
+<div class="sect1">
+<h2 id="_enabling_constraints"><a class="anchor" href="#_enabling_constraints"></a>Enabling Constraints</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Specify a space-separated list of constraints that should be active during media scans.
+If you specify <code>ALL</code>, all constraints will be used.
+Use <code>NONE</code> to not enable any constraints at all.
+If one of the constraints does not accept the video file, it will be skipped.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_size_constraint"><a class="anchor" href="#_file_size_constraint"></a>File Size Constraint</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>FILE_SIZE</code> constraint can be used to filter out small samples or videos that are not necessary to convert to a better codec.
+Be sure to set positive numbers.
+To disable, do not specify <code>FILE_SIZE</code> in <code>CC_CONSTRAINTS_ACTIVE</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_constraint"><a class="anchor" href="#_time_constraint"></a>Time Constraint</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This <code>TIME</code> constraint can be used to disable conversion e.g. during nighttime.
+So if you specify a stop time of <code>16:00</code>, a video file will still begin encoding at <code>15.59</code>.
+The encoding process will <strong>not</strong> get cancelled, even after <code>16:00</code>.
+If you like to stop encoding at <code>20:00</code>, you need to figure out the average encoding time of your videos and subtract it from <code>20:00</code>.
+For example if encoding takes 1.5 hours, specify <code>18:30</code>.
+Bear in mind that the times are localized in your time zone, but in Docker that might still be UTC.
+If you only want to encode during nighttime, switch the start and stop times.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_file_name_constraint"><a class="anchor" href="#_file_name_constraint"></a>File Name Constraint</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can skip video files that match a specific regular expression with the <code>FILE_NAME</code> constraint.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

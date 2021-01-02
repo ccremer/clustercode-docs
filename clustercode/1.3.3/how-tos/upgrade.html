@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Upgrade :: Clustercode Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../../..">Clustercode Docs</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="clustercode" data-version="1.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Clustercode</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install-docker.html">Install On Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install-windows.html">Install On Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install-netdata.html">Install Netdata</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="upgrade.html">Upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Technical reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/storage.html">Storage Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/scan.html">Scan Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/encoder.html">Encoder Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cluster.html">Cluster Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cleanup.html">Cleanup Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/api.html">API Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Explanation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/storage.html">Storage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/scan.html">Scan</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/encoder.html">Encoder</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/cluster.html">Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/cleanup.html">Cleanup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../explanations/api.html">API</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Clustercode</span>
+    <span class="version">1.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Clustercode</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">1.3.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Clustercode</a></li>
+    <li>How To</li>
+    <li><a href="upgrade.html">Upgrade</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">1.3.3</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../index.html">master</a>
+    <a class="version is-missing" href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+    <a class="version is-current" href="upgrade.html">1.3.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/blob/1.3.3/docs/modules/ROOT/pages/how-tos/upgrade.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Upgrade</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page covers the general instructions on how to upgrade to newer versions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When you perform the upgrade, you will lose all current encoding jobs.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The whole cluster needs to run on the same version.
+Running the cluster with different versions is not supported and will not work.
+So, each time you upgrade, prepare for a cold restart of the cluster.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preparation"><a class="anchor" href="#_preparation"></a>Preparation</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Read the release notes.</p>
+</li>
+<li>
+<p>Add or modify the settings that changed or were added in the new
+version either in <code>clustercode.properties</code> (windows) or as env
+variables in your <code>docker-compose.yml</code> (docker/linux) file.</p>
+</li>
+<li>
+<p>On <strong>ALL</strong> nodes (even arbiter nodes) pull the latest version by running
+<code>docker pull braindoctor/clustercode:latest</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_upgrade_between_clustercode_1_x_versions"><a class="anchor" href="#_upgrade_between_clustercode_1_x_versions"></a>Upgrade between Clustercode 1.x versions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_docker"><a class="anchor" href="#_docker"></a>Docker</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop <strong>and remove</strong> all containers by running <code>docker stop clustercode; docker rm clustercode</code>.
+Not a single node should be running at this time.</p>
+</li>
+<li>
+<p>Now, one node after the other, re-create the nodes using <code>docker-compose up -d</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_windows"><a class="anchor" href="#_windows"></a>Windows</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the binaries and replace <code>clustercode.jar</code> with the one in the zip file.</p>
+</li>
+<li>
+<p>Restart the nodes by running <code>clustercode.cmd</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

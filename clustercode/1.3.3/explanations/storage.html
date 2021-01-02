@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Storage :: Clustercode Docs</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../../..">Clustercode Docs</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="clustercode" data-version="1.3.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Clustercode</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-docker.html">Install On Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-windows.html">Install On Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/install-netdata.html">Install Netdata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-tos/upgrade.html">Upgrade</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Technical reference</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/storage.html">Storage Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/scan.html">Scan Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/encoder.html">Encoder Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cluster.html">Cluster Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/cleanup.html">Cleanup Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../references/api.html">API Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Explanation</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="storage.html">Storage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scan.html">Scan</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="encoder.html">Encoder</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cluster.html">Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cleanup.html">Cleanup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="api.html">API</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Clustercode</span>
+    <span class="version">1.3.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Clustercode</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">1.3.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Clustercode</a></li>
+    <li>Explanation</li>
+    <li><a href="storage.html">Storage</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">1.3.3</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../index.html">master</a>
+    <a class="version is-missing" href="../../v2.0.0-rc3/index.html">v2.0.0-rc3</a>
+    <a class="version is-current" href="storage.html">1.3.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ccremer/clustercode/blob/1.3.3/docs/modules/ROOT/pages/explanations/storage.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Storage</h1>
+<div class="sect1">
+<h2 id="_media_input_directory"><a class="anchor" href="#_media_input_directory"></a>Media Input Directory</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>clustercode recursively scans this folder for new video files that need encoding.
+But, don&#8217;t just mount your whole library here!
+clustercode supports prioritized tasks, meaning that you can control the order of the conversions.
+But to find out which order, you need to create <strong>subdirectories</strong> with the number as priority and put your videos in here.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>/input/movie1.mp4</code> will <strong>not</strong> work!</p>
+</li>
+<li>
+<p><code>/input/0/movie1.mp4</code> <strong>will</strong> work.</p>
+</li>
+<li>
+<p><code>/input/1/movie2.mkv</code> will be converted before <code>/input/0/movie1.mp4</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now if you don&#8217;t care about the order, just mount everything in <code>/input/0/your-movie-lib-here</code>.
+But here is another example, which might make sense.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>/input/0/movies/loopdaeD.mkv</code></p>
+</li>
+<li>
+<p><code>/input/1/series/sgnikiV/season1/ep1.mp4</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, every TV episode will be picked up before all movies.
+If another cluster member is currently converting the last video in <code>/input/1/</code>, then clustercode will start looking in <code>/input/0</code>.
+The numbers do not need to be subsequent, but the higher it is, the higher the priority.
+Only use positive integers, so <code>/input/0</code> is your least important input folder, ever!
+However the priority number does not make the conversion faster in any way.
+Also, note thate the input directories <strong>need write permissions</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Ideally every cluster member has access to the same library, meaning that it&#8217;s a shared storage (NFS, GlusterFS etc).
+If you have a cluster member that has additional or different video files to convert, mount them in another priority.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Member A has <code>movies</code> and <code>series</code>, which are on a NFS share.</p>
+</li>
+<li>
+<p>Member B has <code>movies</code>, <code>series</code> and <code>anime</code>, but <code>anime</code> is local storage.</p>
+</li>
+<li>
+<p>Let&#8217;s assume that series are more important, you end up with this structure: <code>/input/0/movies</code>, <code>/input/1/series</code>.
+Now mount in member B another directory: <code>/input/2/anime</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Of course, only Member B will encode the anime files, as A doesn&#8217;t have access to.
+The way clustercode checks if another task is currently being processed by a node is to compare the relative file paths, e.g. <code>0/movies/a-movie.mkv</code>.
+With different priorities it is ensured that the same video is not being processed multiple times.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_media_output_directory"><a class="anchor" href="#_media_output_directory"></a>Media Output Directory</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The converted video files will be stored here.
+But only after they have been successfully encoded.
+There are strategies how the cleanup exactly happens and which directory structure within is being applied.
+See <a href="cleanup.html" class="page">cleanup strategies</a> for more details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_profile_directory"><a class="anchor" href="#_profile_directory"></a>Profile Directory</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The profiles are stored here.
+At first run, <code>default.ffmpeg</code> and <code>x265.ffmpeg</code> will be created here.
+The default uses common x264 parameters for <code>ffmpeg</code> and is the last resort for profiles if others couldn&#8217;t be matched.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_temporary_directory"><a class="anchor" href="#_temporary_directory"></a>Temporary Directory</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is where the currently processing video file is being created.
+In Docker containers the files are stored with the image filesystem by default, rather than a tmpfs in /tmp, which consumes RAM.
+If you have special storage needs, you can mount it from outside.
+If a container stops during conversion, this directory will not get cleaned and the conversion process cannot resume from where it left.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

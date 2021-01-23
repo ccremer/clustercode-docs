@@ -48,7 +48,7 @@
     <span class="nav-text">How To</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../how-tos/create-clustercode-plan.html">Create Clustercode Plan</a>
+    <a class="nav-link" href="../how-tos/create-blueprint.html">Create Blueprint</a>
   </li>
 </ul>
   </li>
@@ -168,9 +168,10 @@ All steps with Ffmpeg are executed with Kubernetes Jobs, while the encoding step
 </div>
 <div class="paragraph">
 <p>Clustercode operates in either in "operator" or "client" mode.
-As an operator, clustercode "translates" Clustercode Plans into Tasks, which in turn control the spawning CronJobs and Jobs.
+As an operator, clustercode creates Tasks from Blueprints, which in turn control the spawning CronJobs and Jobs.
 There is only one operator on the cluster across all namespaces.
-In Jobs and CronJobs, Clustercode is launched as a client, interacting with Kubernetes API. CronJobs and Jobs are launched in the same namespace as the ClusterCode plan is in.</p>
+In Jobs and CronJobs, Clustercode is launched as a client, interacting with Kubernetes API.
+CronJobs and Jobs are launched in the same namespace as the Blueprint is in.</p>
 </div>
 </div>
 </div>

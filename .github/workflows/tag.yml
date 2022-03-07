@@ -25,7 +25,7 @@ jobs:
     - name: Add new tag to Antora playbook
       run: make docs-add-clustercode-tag NEW_TAG=${{ github.event.inputs.new_tag }}
     - name: Commit new tag to Antora playbook
-      uses: EndBug/add-and-commit@v7
+      uses: EndBug/add-and-commit@v8
       with:
         add: '*'
         author_name: "${{ github.actor }}"
